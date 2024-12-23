@@ -1,0 +1,6 @@
+// _mixins.scss
+@mixin hoverEffect {
+  &:hover {
+    transform: scale(1.05);
+  }
+}

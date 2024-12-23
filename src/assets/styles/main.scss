@@ -1,0 +1,87 @@
+// will use some of the class from tailwind
+// will not use responsive class from tailwind (though it can be easier and cleaner if we use them)
+// will be creating / handling the responsive on my own for this assessment
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: $font-family;
+  background: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $primary-color;
+  box-sizing: border-box; 
+}
+
+// loading animation
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+
+  &::before,
+  &::after {
+    content: "";
+    grid-area: 1 / 1;
+    --c: no-repeat radial-gradient(farthest-side,  var(--primary-color) 92%, transparent);
+    background: 
+      var(--c) 50% 0, 
+      var(--c) 50% 100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+  }
+
+  &::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+// animation
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform-origin: top left;
+}
+
+@keyframes enterCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg) translate(-50%, -50%);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg) translate(-50%, -50%);
+  }
+
+  70% {
+    transform: rotate(3deg) translate(-50%, -50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.enter {
+  animation-name: enterCenter;
+}

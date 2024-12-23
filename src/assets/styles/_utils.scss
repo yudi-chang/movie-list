@@ -1,0 +1,89 @@
+// Mixin for margin and padding
+// tailwind should have these class for margin, padding and font-weight
+// I made to this to show that it's possible to create our own class group for margin / padding / font weight
+@mixin margin($value) {
+  margin: $value;
+}
+
+@mixin padding($value) {
+  padding: $value;
+}
+
+@mixin margin-top($value) {
+  margin-top: $value;
+}
+
+@mixin margin-bottom($value) {
+  margin-bottom: $value;
+}
+
+@mixin margin-left($value) {
+  margin-left: $value;
+}
+
+@mixin margin-right($value) {
+  margin-right: $value;
+}
+
+@mixin padding-top($value) {
+  padding-top: $value;
+}
+
+@mixin padding-bottom($value) {
+  padding-bottom: $value;
+}
+
+@mixin padding-left($value) {
+  padding-left: $value;
+}
+
+@mixin padding-right($value) {
+  padding-right: $value;
+}
+
+// Margin utilities (multiples of 4)
+@for $i from 1 through 10 {
+  .m-#{$i * 4} { @include margin(#{$i * 4}px); }
+  .mt-#{$i * 4} { @include margin-top(#{$i * 4}px); }
+  .mb-#{$i * 4} { @include margin-bottom(#{$i * 4}px); }
+  .ml-#{$i * 4} { @include margin-left(#{$i * 4}px); }
+  .mr-#{$i * 4} { @include margin-right(#{$i * 4}px); }
+  .mv-#{$i * 4} { @include margin-top(#{$i * 4}px); @include margin-bottom(#{$i * 4}px); } // Vertical margin (top + bottom)
+  .mh-#{$i * 4} { @include margin-left(#{$i * 4}px); @include margin-right(#{$i * 4}px); } // Horizontal margin
+}
+
+// Padding utilities (multiples of 4)
+@for $i from 1 through 10 {
+  .p-#{$i * 4} { @include padding(#{$i * 4}px); }
+  .pt-#{$i * 4} { @include padding-top(#{$i * 4}px); }
+  .pb-#{$i * 4} { @include padding-bottom(#{$i * 4}px); }
+  .pl-#{$i * 4} { @include padding-left(#{$i * 4}px); }
+  .pr-#{$i * 4} { @include padding-right(#{$i * 4}px); }
+  .pv-#{$i * 4} { @include padding-top(#{$i * 4}px); @include padding-bottom(#{$i * 4}px); } // Vertical padding (top + bottom)
+  .ph-#{$i * 4} { @include padding-left(#{$i * 4}px); @include padding-right(#{$i * 4}px); } // Horizontal padding
+}
+
+// font weight utilities
+// Mixin for font weight
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+// Font weight utilities
+$font-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
+
+@each $name, $value in $font-weights {
+  .fw-#{"#{$name}"} {
+    @include font-weight($value);
+  }
+}
