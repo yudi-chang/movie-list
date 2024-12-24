@@ -3,7 +3,7 @@
   <div>
     <template v-if="!props.isErrorFetching">
       <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
-      <MoviesSearchBar />
+      <MoviesSearchBar v-if="showUtilities"/>
     </template>
     <div class="movies mt-40">
       <div v-if="props.isLoading" class="loader"></div>
@@ -45,11 +45,17 @@ import MoviesSearchBar from './MoviesSearchBar.vue';
 import EmptyMovies from './EmptyMovies.vue';
 
 // props
-const props = defineProps<{
+const props = withDefaults(
+  defineProps<{
   movies: Movie[]
   isLoading: boolean
   isErrorFetching: boolean
-}>()
+  showUtilities?: boolean
+}>(),
+  {
+    showUtilities: true,
+  }
+)
 
 // inject
 const fetchMovies = inject<() => void>('fetchMovies')

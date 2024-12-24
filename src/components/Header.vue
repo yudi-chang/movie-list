@@ -40,6 +40,7 @@ const isActive = ref<boolean>(false);
 // no need to make this reactive
 const links: Link[] = [
   { name: "Movies", to: "/" },
+  { name: "Favorites", to: "/favorites" },
   { name: "Contact Us", to: "/contact-us" }
 ];
 

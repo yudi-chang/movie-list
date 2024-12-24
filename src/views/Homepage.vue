@@ -4,7 +4,7 @@
       <Movies :movies="movies" :is-loading="isLoading" :is-error-fetching="isErrorFetching"/>
 
       <v-pagination
-        v-if="totalPages > 0"
+        v-if="totalPages > 0 && !isLoading && !isErrorFetching"
         v-model="page"
         @update:modelValue="onPageChange"
         :length="totalPages"
@@ -54,6 +54,8 @@ const fetchMovies = async (payload: MoviesFetchPayload): Promise<void> => {
     movies.splice(0, movies.length, ...response.data.data as Movie[]);
     page.value = response.data.page as number;
     totalPages.value = response.data.total_pages as number;
+
+    scrollToTop();
   } catch {
     isErrorFetching.value = true;
   } finally {
@@ -66,6 +68,13 @@ const onPageChange = (newPage: number) => {
     Title: currentTitle.value,
     page: newPage,
   } as MoviesFetchPayload);
+};
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 };
 
 // provide
