@@ -1,13 +1,13 @@
 
 <template>
   <div>
-    <template v-if="!isErrorFetching">
+    <template v-if="!props.isErrorFetching">
       <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
-      <MoviesSearchBar class="mb-28" />
+      <MoviesSearchBar />
     </template>
-    <div class="movies">
-      <div v-if="isLoading" class="loader"></div>
-      <template v-else-if="isErrorFetching">
+    <div class="movies mt-40">
+      <div v-if="props.isLoading" class="loader"></div>
+      <template v-else-if="props.isErrorFetching">
         <ErrorMessage @retry-fetch="refetchMovies()"/>
       </template>
       <template v-else>
@@ -15,15 +15,19 @@
           <EmptyMovies />
         </template>
         <template v-else>
-          <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
+          <div v-for="movie in props.movies" :key="movie.imdbID" class="movie-card">
             <article>
               <div class="movie-img">
                 <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
               </div>
-              <div class="movie-info pt-16 pb-4 ph-16">
-                <h2 class="fw-normal">{{ movie.Title }}</h2>
-                <div class="mv-12 fw-bold">{{ movie.imdbID }}</div>
-                <div class="mv-12 fw-bold">{{ movie.Year }}</div>
+              <div class="movie-info text-md fw-bold p-20 ph-16">
+                <h2>{{ movie.Title }}</h2>
+                <div class="additional-info">
+                  <a :href="`https://www.imdb.com/title/${movie.imdbID}/`" target="_blank" class="imdb-info text-sm ph-12 pv-4 fw-bold"> 
+                    IMDb: {{ movie.imdbID }}
+                  </a>
+                  <div class="text-sm mv-12 ph-12 pv-4 fw-bold year-info">Release: {{ movie.Year }}</div>
+                </div>
               </div>
             </article>
           </div>
@@ -74,7 +78,6 @@ const refetchMovies = (): void => {
 
   .movie-card {
     display: flex;
-    overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -82,6 +85,8 @@ const refetchMovies = (): void => {
     width: calc(25% - 30px);
     box-sizing: border-box;
     transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: 25px;
 
     &:hover {
       box-shadow: 0 8px 16px $primary-color, 0 8px 32px $primary-color;
@@ -94,6 +99,37 @@ const refetchMovies = (): void => {
       }
     }
 
+    .movie-info {
+      text-align: center;
+    }
+
+    .additional-info {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+
+      > * {
+        border-radius: 5px;
+        flex-grow: 0;
+        width: auto;
+      }
+
+      .imdb-info {
+        background-color: #f1c40f;
+        color: $primary-color;
+      }
+
+      .year-info {
+        background-color: #2980b9;
+      }
+    }
+
     article {
       width: 100%;
     }
@@ -101,6 +137,7 @@ const refetchMovies = (): void => {
     .movie-img {
       width: 100%;
       padding-top: 125%;
+      overflow: hidden;
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;

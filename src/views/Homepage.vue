@@ -4,6 +4,7 @@
       <Movies :movies="movies" :is-loading="isLoading" :is-error-fetching="isErrorFetching"/>
 
       <v-pagination
+        v-if="totalPages > 0"
         v-model="page"
         @update:modelValue="onPageChange"
         :length="totalPages"

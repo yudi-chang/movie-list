@@ -21,8 +21,7 @@
 
 
 <script setup lang="ts">
-import { ref, watch, inject } from 'vue';
-import type { Ref } from 'vue';
+import { ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router'
 import BurgerIconMenu from './BurgerIconMenu.vue';
 
@@ -35,7 +34,7 @@ type Link = {
 };
 
 // reactive vars
-const isActive: Ref<boolean> = ref(false);
+const isActive = ref<boolean>(false);
 
 // other vars
 // no need to make this reactive
