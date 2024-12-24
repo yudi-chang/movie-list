@@ -12,18 +12,23 @@
           <ErrorMessage @retry-fetch="refetchMovies()"/>
         </template>
         <template v-else>
-          <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
-            <article>
-              <div class="movie-img">
-                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
-              </div>
-              <div class="movie-info pt-16 pb-4 ph-16">
-                <h2 class="fw-normal">{{ movie.Title }}</h2>
-                <div class="mv-12 fw-bold">{{ movie.imdbID }}</div>
-                <div class="mv-12 fw-bold">{{ movie.Year }}</div>
-              </div>
-            </article>
-          </div>
+          <template v-if="movies.length === 0">
+            <EmptyMovies />
+          </template>
+          <template v-else>
+            <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
+              <article>
+                <div class="movie-img">
+                  <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
+                </div>
+                <div class="movie-info pt-16 pb-4 ph-16">
+                  <h2 class="fw-normal">{{ movie.Title }}</h2>
+                  <div class="mv-12 fw-bold">{{ movie.imdbID }}</div>
+                  <div class="mv-12 fw-bold">{{ movie.Year }}</div>
+                </div>
+              </article>
+            </div>
+          </template>
         </template>
       </div>
     </Container>
@@ -36,6 +41,7 @@ import { inject, defineProps } from 'vue';
 import ErrorMessage from './ErrorMessage.vue';
 import Container from './Container.vue';
 import MoviesSearchBar from './MoviesSearchBar.vue';
+import EmptyMovies from './EmptyMovies.vue';
 
 // props
 const props = defineProps<{

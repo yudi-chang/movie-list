@@ -61,7 +61,7 @@ const debouncedSearch = () => {
     right: 25px;
     transform: translateY(-50%);
     height: 20px;
-    z-index: 999;
+    z-index: 1;
   }
 }
 </style>
