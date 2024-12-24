@@ -1,14 +1,13 @@
 <template>
   <main>
-    <Movies />
+    <Movies :movies="movies" :is-loading="isLoading" :is-error-fetching="isErrorFetching"/>
   </main>
 </template>
 
 
 <script setup lang="ts">
-import { onBeforeMount } from 'vue';
 import axios from 'axios';
-import { ref, reactive } from 'vue';
+import { ref, reactive, provide, onBeforeMount } from 'vue';
 import type { MoviesFetchPayload, Movie } from '@/types';
 import Movies from '../components/Movies.vue'
 
@@ -44,4 +43,7 @@ const fetchMovies = async (payload: MoviesFetchPayload): Promise<void> => {
     isLoading.value = false;
   }
 };
+
+// provide
+provide('fetchMovies', fetchMovies)
 </script>

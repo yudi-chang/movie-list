@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="pv-8 text-3xl fw-bold" style="cursor: pointer;"><NuxtLink to="/">Movies DB</NuxtLink></h1>
+    <h1 class="pv-8 text-3xl fw-bold" style="cursor: pointer;"><RouterLink to="/">Film DB</RouterLink></h1>
     <nav :class="{ 'active' : isActive }">
       <ul>
         <li 
@@ -21,7 +21,7 @@
 
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, inject } from 'vue';
 import type { Ref } from 'vue';
 import { RouterLink, useRoute } from 'vue-router'
 import BurgerIconMenu from './BurgerIconMenu.vue';
