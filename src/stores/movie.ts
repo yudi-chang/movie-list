@@ -10,10 +10,10 @@ export const useMovieStore = defineStore('movie', {
     favorites: [],
   }),
   actions: {
-    addFavorites(movie: Movie) {
+    addFavorites(movie: Movie): void {
       this.favorites.push(movie)
     },
-    removeFromFavorites(moviePayload: Movie) {
+    removeFromFavorites(moviePayload: Movie): void {
       const index = this.favorites.findIndex(movie => movie.imdbID === moviePayload.imdbID);
       if (index !== -1) {
         this.favorites.splice(index, 1);

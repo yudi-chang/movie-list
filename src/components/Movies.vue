@@ -18,7 +18,7 @@
           <div v-for="movie in props.movies" :key="movie.imdbID" class="movie-card">
             <article>
               <div class="movie-img">
-                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />  
+                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" loading="lazy" />  
                 <FavoritesButton :movie="movie" class="fav-btn"/>
               </div>
               <div class="movie-info text-md fw-bold p-20 ph-16">
@@ -149,6 +149,7 @@ const refetchMovies = (): void => {
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
+      border-radius: 5px;
 
       .fav-btn {
         position: absolute;
