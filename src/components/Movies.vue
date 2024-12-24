@@ -2,7 +2,10 @@
 <template>
   <div>
     <Container>
-      <h1 v-if="!isErrorFetching" class="mb-28 text-3xl fw-bold">Movies</h1>
+      <template v-if="!isErrorFetching">
+        <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
+        <MoviesSearchBar class="mb-28" />
+      </template>
       <div class="movies">
         <div v-if="isLoading" class="loader"></div>
         <template v-else-if="isErrorFetching">
@@ -12,7 +15,7 @@
           <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
             <article>
               <div class="movie-img">
-                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" loading="lazy" />
+                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
               </div>
               <div class="movie-info pt-16 pb-4 ph-16">
                 <h2 class="fw-normal">{{ movie.Title }}</h2>
@@ -32,6 +35,7 @@ import type { Movie } from '@/types';
 import { inject, defineProps } from 'vue';
 import ErrorMessage from './ErrorMessage.vue';
 import Container from './Container.vue';
+import MoviesSearchBar from './MoviesSearchBar.vue';
 
 // props
 const props = defineProps<{
@@ -72,7 +76,7 @@ const refetchMovies = (): void => {
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    width: calc(25% - 35px);
+    width: calc(25% - 30px);
     box-sizing: border-box;
     transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
 
