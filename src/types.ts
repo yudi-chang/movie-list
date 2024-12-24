@@ -1,6 +1,6 @@
 export type MoviesFetchPayload = {
   Title?: string;
-  page?: number | string;
+  page?: number;
 };
 
 export type Movie = {

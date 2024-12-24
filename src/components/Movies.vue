@@ -1,45 +1,42 @@
 
 <template>
   <div>
-    <Container>
-      <template v-if="!isErrorFetching">
-        <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
-        <MoviesSearchBar class="mb-28" />
+    <template v-if="!isErrorFetching">
+      <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
+      <MoviesSearchBar class="mb-28" />
+    </template>
+    <div class="movies">
+      <div v-if="isLoading" class="loader"></div>
+      <template v-else-if="isErrorFetching">
+        <ErrorMessage @retry-fetch="refetchMovies()"/>
       </template>
-      <div class="movies">
-        <div v-if="isLoading" class="loader"></div>
-        <template v-else-if="isErrorFetching">
-          <ErrorMessage @retry-fetch="refetchMovies()"/>
+      <template v-else>
+        <template v-if="movies.length === 0">
+          <EmptyMovies />
         </template>
         <template v-else>
-          <template v-if="movies.length === 0">
-            <EmptyMovies />
-          </template>
-          <template v-else>
-            <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
-              <article>
-                <div class="movie-img">
-                  <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
-                </div>
-                <div class="movie-info pt-16 pb-4 ph-16">
-                  <h2 class="fw-normal">{{ movie.Title }}</h2>
-                  <div class="mv-12 fw-bold">{{ movie.imdbID }}</div>
-                  <div class="mv-12 fw-bold">{{ movie.Year }}</div>
-                </div>
-              </article>
-            </div>
-          </template>
+          <div v-for="movie in movies" :key="movie.imdbID" class="movie-card">
+            <article>
+              <div class="movie-img">
+                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
+              </div>
+              <div class="movie-info pt-16 pb-4 ph-16">
+                <h2 class="fw-normal">{{ movie.Title }}</h2>
+                <div class="mv-12 fw-bold">{{ movie.imdbID }}</div>
+                <div class="mv-12 fw-bold">{{ movie.Year }}</div>
+              </div>
+            </article>
+          </div>
         </template>
-      </div>
-    </Container>
+      </template>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Movie } from '@/types';
-import { inject, defineProps } from 'vue';
+import { inject } from 'vue';
 import ErrorMessage from './ErrorMessage.vue';
-import Container from './Container.vue';
 import MoviesSearchBar from './MoviesSearchBar.vue';
 import EmptyMovies from './EmptyMovies.vue';
 
@@ -62,7 +59,7 @@ const refetchMovies = (): void => {
 
 <style scoped lang="scss">
 .loader {
-  margin: 15% auto 0 auto;
+  margin: 15% auto 15% auto;
 }
 
 .movies {
