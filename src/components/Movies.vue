@@ -18,7 +18,8 @@
           <div v-for="movie in props.movies" :key="movie.imdbID" class="movie-card">
             <article>
               <div class="movie-img">
-                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />
+                <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" />  
+                <FavoritesButton :movie="movie" class="fav-btn"/>
               </div>
               <div class="movie-info text-md fw-bold p-20 ph-16">
                 <h2>{{ movie.Title }}</h2>
@@ -43,6 +44,7 @@ import { inject } from 'vue';
 import ErrorMessage from './ErrorMessage.vue';
 import MoviesSearchBar from './MoviesSearchBar.vue';
 import EmptyMovies from './EmptyMovies.vue';
+import FavoritesButton from './FavoritesButton.vue';
 
 // props
 const props = withDefaults(
@@ -147,6 +149,13 @@ const refetchMovies = (): void => {
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
+
+      .fav-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        z-index: 1;
+      }
 
       img {
         transition: transform 0.3s ease;
