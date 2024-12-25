@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import Movies from '../components/Movies.vue'
-import Container from '../components/Container.vue';
+import Movies from '@/components/Movies.vue'
+import Container from '@/components/Container.vue';
 import { useMovieStore } from '@/stores/movie';
 
 // store

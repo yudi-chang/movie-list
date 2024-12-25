@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ErrorMessage > should renders and have button click working properly (emit retry-fetch) 1`] = `
+DOMWrapper {
+  "isDisabled": [Function],
+  "wrapperElement": <div
+    class="error-message"
+    data-test="error-message-wrapper"
+    data-v-54924f92=""
+  >
+    <img
+      alt="Unexpected error image"
+      data-v-54924f92=""
+      src="/images/error-logo.png"
+    />
+    <h2
+      class="mb-12 text-xl fw-bold"
+      data-v-54924f92=""
+    >
+      Oops something went wrong
+    </h2>
+    <div
+      class="message"
+      data-v-54924f92=""
+    >
+      An unexpected error has occured. please try again or contact support if the error persists
+    </div>
+    <button
+      class="mt-20"
+      data-test="retry-btn"
+      data-v-54924f92=""
+    >
+       Try again 
+    </button>
+  </div>,
+}
+`;

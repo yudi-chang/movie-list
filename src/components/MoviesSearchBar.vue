@@ -1,6 +1,6 @@
 <template>
   <div class="p-8 search-bar-wrapper">
-    <input v-model="titleSearch" @input="debouncedSearch">
+    <input v-model="titleSearch" @input="debouncedSearch" data-test="search-field">
     <img src="/images/search-icon.png" alt="Search" />
   </div>
 </template>

@@ -1,0 +1,647 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Movie > should render Movies list correctly when movies is not empty 1`] = `
+DOMWrapper {
+  "isDisabled": [Function],
+  "wrapperElement": <div
+    class="movies mt-40"
+    data-test="movies-list"
+    data-v-62d96320=""
+  >
+    
+    
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0114898/"
+              target="_blank"
+            >
+               IMDb: tt0114898
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1995
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0189200/"
+              target="_blank"
+            >
+               IMDb: tt0189200
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1995
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of The Making"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=The+Making"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            The Making of 'Waterworld'
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt2670548/"
+              target="_blank"
+            >
+               IMDb: tt2670548
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1995
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld 4: History of the Islands
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0161077/"
+              target="_blank"
+            >
+               IMDb: tt0161077
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1997
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0455840/"
+              target="_blank"
+            >
+               IMDb: tt0455840
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1997
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0390617/"
+              target="_blank"
+            >
+               IMDb: tt0390617
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1997
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Swordquest"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Swordquest"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Swordquest: Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt2761086/"
+              target="_blank"
+            >
+               IMDb: tt2761086
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1983
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Behind the"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Behind+the"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Behind the Scenes of the Most Fascinating Waterworld on Earth: The Great Backwaters, Kerala.
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt5847056/"
+              target="_blank"
+            >
+               IMDb: tt5847056
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 2014
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Louise's W"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Louise's+W"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Louise's Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0298417/"
+              target="_blank"
+            >
+               IMDb: tt0298417
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 1997
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="movie-card"
+      data-test="movie-item"
+      data-v-62d96320=""
+    >
+      <article
+        data-v-62d96320=""
+      >
+        <div
+          class="movie-img"
+          data-v-62d96320=""
+        >
+          <img
+            alt="Image of Waterworld"
+            data-v-62d96320=""
+            loading="lazy"
+            src="https://placehold.co/400x500/34495e/FFF?text=Waterworld"
+          />
+          <div
+            class="wrapper fav-btn"
+            data-v-13ae506b=""
+            data-v-62d96320=""
+          >
+            <button
+              class="star-btn"
+              data-test="favorite-btn"
+              data-v-13ae506b=""
+            >
+               ★ 
+            </button>
+          </div>
+        </div>
+        <div
+          class="movie-info text-md fw-bold p-20 ph-16"
+          data-v-62d96320=""
+        >
+          <h2
+            data-v-62d96320=""
+          >
+            Waterworld
+          </h2>
+          <div
+            class="additional-info"
+            data-v-62d96320=""
+          >
+            <a
+              class="imdb-info text-sm ph-12 pv-4 fw-bold"
+              data-v-62d96320=""
+              href="https://www.imdb.com/title/tt0381702/"
+              target="_blank"
+            >
+               IMDb: tt0381702
+            </a>
+            <div
+              class="text-sm mv-12 ph-12 pv-4 fw-bold year-info"
+              data-v-62d96320=""
+            >
+              Release: 2001
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+    
+  </div>,
+}
+`;

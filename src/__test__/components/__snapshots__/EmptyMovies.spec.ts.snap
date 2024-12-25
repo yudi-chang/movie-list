@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EmptyMovies > should renders correctly 1`] = `
+<div
+  class="not-found-message"
+  data-v-20e20707=""
+>
+  <img
+    alt="Movie not found"
+    data-v-20e20707=""
+    src="/images/not-found-logo.png"
+  />
+  <h2
+    class="mt-28 text-3xl fw-bold"
+    data-v-20e20707=""
+  >
+    No movies found
+  </h2>
+</div>
+`;

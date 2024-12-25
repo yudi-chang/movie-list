@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MoviesSearchBar > should renders correctly 1`] = `
+<div
+  class="p-8 search-bar-wrapper"
+  data-v-26d1eaa1=""
+>
+  <input
+    data-test="search-field"
+    data-v-26d1eaa1=""
+  />
+  <img
+    alt="Search"
+    data-v-26d1eaa1=""
+    src="/images/search-icon.png"
+  />
+</div>
+`;

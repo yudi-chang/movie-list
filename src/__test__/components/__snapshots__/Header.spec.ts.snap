@@ -1,0 +1,122 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > should render header correctly 1`] = `
+<header
+  data-v-c970699f=""
+>
+  <h1
+    class="pv-8 text-3xl fw-bold"
+    data-v-c970699f=""
+    style="cursor: pointer;"
+  >
+    <a
+      aria-current="page"
+      class="router-link-active router-link-exact-active"
+      data-v-c970699f=""
+      href="/"
+    >
+      Film DB
+    </a>
+  </h1>
+  <nav
+    class=""
+    data-v-c970699f=""
+  >
+    <ul
+      data-v-c970699f=""
+    >
+      
+      <li
+        class="active fw-bold ph-12 pv-8"
+        data-test="navigation-item"
+        data-v-c970699f=""
+      >
+        <span
+          data-v-c970699f=""
+        >
+          <a
+            aria-current="page"
+            class="router-link-active router-link-exact-active"
+            data-v-c970699f=""
+            href="/"
+          >
+            Movies 
+            <!--v-if-->
+          </a>
+        </span>
+      </li>
+      <li
+        class="fw-bold ph-12 pv-8"
+        data-test="navigation-item"
+        data-v-c970699f=""
+      >
+        <span
+          data-v-c970699f=""
+        >
+          <a
+            class=""
+            data-v-c970699f=""
+            href="/favorites"
+          >
+            Favorites 
+            <div
+              class="counter-wrapper text-xs"
+              data-test="counter-wrapper"
+              data-v-c970699f=""
+              data-v-f9cbd204=""
+            >
+              0
+            </div>
+          </a>
+        </span>
+      </li>
+      <li
+        class="fw-bold ph-12 pv-8"
+        data-test="navigation-item"
+        data-v-c970699f=""
+      >
+        <span
+          data-v-c970699f=""
+        >
+          <a
+            class=""
+            data-v-c970699f=""
+            href="/contact-us"
+          >
+            Contact Us 
+            <!--v-if-->
+          </a>
+        </span>
+      </li>
+      
+    </ul>
+  </nav>
+  <div
+    class="hamburger-wrapper burger-icon-menu"
+    data-test="hamburger-menu"
+    data-v-c970699f=""
+    data-v-d2ad046a=""
+    id="icon"
+  >
+    <div
+      class="icon-1"
+      data-v-d2ad046a=""
+      id="a"
+    />
+    <div
+      class="icon-2"
+      data-v-d2ad046a=""
+      id="b"
+    />
+    <div
+      class="icon-3"
+      data-v-d2ad046a=""
+      id="c"
+    />
+    <div
+      class="clear"
+      data-v-d2ad046a=""
+    />
+  </div>
+</header>
+`;

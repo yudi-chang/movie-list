@@ -1,9 +1,9 @@
 <template>
-  <div class="error-message">
+  <div class="error-message" data-test="error-message-wrapper">
     <img src="/images/error-logo.png" alt="Unexpected error image" />
     <h2 class="mb-12 text-xl fw-bold">Oops something went wrong</h2>
     <div class="message">An unexpected error has occured. please try again or contact support if the error persists</div>
-    <button @click="retry()" class="mt-20">
+    <button @click="retry()" class="mt-20" data-test="retry-btn">
       Try again
     </button>
   </div>

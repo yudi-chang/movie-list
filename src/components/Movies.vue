@@ -3,10 +3,10 @@
   <div>
     <template v-if="!props.isErrorFetching">
       <h1 class="mb-28 text-3xl fw-bold">{{ props.title }}</h1>
-      <MoviesSearchBar v-if="showUtilities"/>
+      <MoviesSearchBar v-if="showUtilities" data-test="movies-utilities"/>
     </template>
-    <div class="movies mt-40">
-      <div v-if="props.isLoading" class="loader"></div>
+    <div class="movies mt-40" data-test="movies-list">
+      <div v-if="props.isLoading" class="loader" data-test="loader"></div>
       <template v-else-if="props.isErrorFetching">
         <ErrorMessage @retry-fetch="refetchMovies()"/>
       </template>
@@ -15,7 +15,7 @@
           <EmptyMovies />
         </template>
         <template v-else>
-          <div v-for="movie in props.movies" :key="movie.imdbID" class="movie-card">
+          <div v-for="movie in props.movies" :key="movie.imdbID" class="movie-card" data-test="movie-item">
             <article>
               <div class="movie-img">
                 <img :src="`https://placehold.co/400x500/34495e/FFF?text=${movie.Title.slice(0, 10).replace(/ /g, '+')}`" :alt="`Image of ${movie.Title.slice(0, 10)}`" loading="lazy" />  

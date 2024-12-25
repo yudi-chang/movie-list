@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <button @click="handleFavoritesClick" :class="{ favorited: isFavorite }" class="star-btn">
+    <button @click="handleFavoritesClick" :class="{ favorited: isFavorite }" class="star-btn" data-test="favorite-btn">
       ★
     </button>
   </div>

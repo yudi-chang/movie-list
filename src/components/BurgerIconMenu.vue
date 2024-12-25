@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburger-wrapper" :class="{ 'active': active }" id="icon" @click="toggleMenu()">
+  <div class="hamburger-wrapper" :class="{ 'active': active }" id="icon" @click="toggleMenu()" data-test="hamburger-menu">
     <div class="icon-1" id="a"></div>
     <div class="icon-2" id="b"></div>
     <div class="icon-3" id="c"></div>

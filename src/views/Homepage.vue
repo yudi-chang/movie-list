@@ -21,8 +21,8 @@
 import axios from 'axios';
 import { ref, reactive, provide, onBeforeMount } from 'vue';
 import type { MoviesFetchPayload, Movie } from '@/types';
-import Movies from '../components/Movies.vue'
-import Container from '../components/Container.vue';
+import Movies from '@/components/Movies.vue'
+import Container from '@/components/Container.vue';
 
 // these variable and the fetch methods is possible to be put inside pinia store
 // but since it has been used only in homepage, I put it as reactive variable and method inside the .vue page
@@ -35,8 +35,8 @@ const movies = reactive<Movie[]>([])
 const currentTitle = ref<string>('')
 
 // hook cycle
-onBeforeMount(async () => {
-  await fetchMovies({} as MoviesFetchPayload);
+onBeforeMount(() => {
+  fetchMovies({} as MoviesFetchPayload);
 });
 
 // methods

@@ -8,6 +8,7 @@
           :key="link.name" 
           :class="{ active: route.path === link.to }"
           class="fw-bold ph-12 pv-8"
+          data-test="navigation-item"
         >
           <span>
             <RouterLink :to="link.to">

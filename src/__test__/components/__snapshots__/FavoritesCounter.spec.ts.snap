@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FavoritesCounter > should render counter correctly 1`] = `
+DOMWrapper {
+  "isDisabled": [Function],
+  "wrapperElement": <div
+    class="counter-wrapper text-xs"
+    data-test="counter-wrapper"
+    data-v-f9cbd204=""
+  >
+    3
+  </div>,
+}
+`;

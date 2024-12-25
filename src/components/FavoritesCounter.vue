@@ -1,5 +1,5 @@
 <template>
-  <div class="counter-wrapper text-xs">
+  <div class="counter-wrapper text-xs" data-test="counter-wrapper">
     {{ movieStore.favoritesCount }}
   </div>
 </template>
