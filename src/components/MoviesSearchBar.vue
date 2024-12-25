@@ -28,7 +28,7 @@ const fetchMoviesWithPayload = (): void => {
 }
 
 // use debounce composable
-const { debounce, isWaiting } = useDebounce<string>(() => {
+const { debounce } = useDebounce<string>(() => {
   fetchMoviesWithPayload()
 }, 450)
 

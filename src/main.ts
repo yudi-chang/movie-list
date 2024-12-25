@@ -2,6 +2,7 @@ import './assets/styles/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import { createVuetify } from 'vuetify';
 import { VPagination } from 'vuetify/components';
 import 'vuetify/styles';
@@ -15,8 +16,9 @@ const vuetify = createVuetify({
     VPagination,
   },
 });
+const pinia = createPinia().use(piniaPluginPersistedstate);
 
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 app.use(vuetify)
 

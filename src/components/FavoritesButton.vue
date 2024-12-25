@@ -21,7 +21,7 @@ const props = defineProps<{
 
 // computed
 const isFavorite = computed(() => {
-  return movieStore.favorites.some(movie => movie.imdbID === props.movie.imdbID);
+  return props.movie.imdbID in movieStore.favoriteIDs;
 })
 
 // methods
