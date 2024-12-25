@@ -18,6 +18,11 @@ export const useMovieStore = defineStore('movie', {
     // this increase performance / reduce complexity instead of checking isFavorite by checking / looping through array "favorites"
     favoriteIDs: {},
   }),
+  getters: {
+    favoritesCount(): number {
+      return this.favorites.length
+    },
+  },
   actions: {
     addFavorites(movie: Movie): void {
       this.favorites.push(movie)

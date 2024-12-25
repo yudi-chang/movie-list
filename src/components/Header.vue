@@ -10,7 +10,12 @@
           class="fw-bold ph-12 pv-8"
         >
           <span>
-            <RouterLink :to="link.to">{{ link.name }}</RouterLink>
+            <RouterLink :to="link.to">
+              {{ link.name }}
+              <template v-if="link.to === '/favorites'">
+                <FavoritesCounter />
+              </template>
+            </RouterLink>
           </span>
         </li>
       </ul>
@@ -22,8 +27,9 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router';
 import BurgerIconMenu from './BurgerIconMenu.vue';
+import FavoritesCounter from './FavoritesCounter.vue';
 
 const route = useRoute();
 
