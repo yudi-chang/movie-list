@@ -1,7 +1,6 @@
 import { setActivePinia, createPinia } from 'pinia';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { useMovieStore } from '@/stores/movie';
-import type { Movie } from '@/types';
 import movieResponse from '@/__test__/mocks/get-movies'
 
 describe('Movie Store', () => {
