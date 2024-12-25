@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Contact > should renders correctly 1`] = `
+<div
+  class="contact-page"
+  data-v-337105ab=""
+>
+  <div
+    class="contact-container animate enter"
+    data-v-337105ab=""
+  >
+    <div
+      class="image-wrapper"
+      data-v-337105ab=""
+    >
+      <img
+        alt="Cart"
+        data-v-337105ab=""
+        src="/images/profile-picture.png"
+      />
+    </div>
+    <div
+      class="contact-info"
+      data-v-337105ab=""
+    >
+      <h1
+        class="text-3xl fw-bold"
+        data-v-337105ab=""
+      >
+        M. Yudi Chang
+      </h1>
+      <h3
+        class="text-xl fw-bold"
+        data-v-337105ab=""
+      >
+        Frontend Developer
+      </h3>
+      <p
+        class="text-sm"
+        data-v-337105ab=""
+      >
+        <a
+          data-v-337105ab=""
+          href="mailto:m.yudi.chang@gmail.com"
+        >
+          m.yudi.chang@gmail.com
+        </a>
+      </p>
+      <p
+        class="text-sm"
+        data-v-337105ab=""
+      >
+        <a
+          data-v-337105ab=""
+          href="https://www.linkedin.com/in/yudi-chang/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           https://www.linkedin.com/in/yudi-chang/ 
+        </a>
+      </p>
+      <p
+        class="text-sm"
+        data-v-337105ab=""
+      >
+        <a
+          data-v-337105ab=""
+          href="tel:+6289686211228"
+        >
+          +6289686211228
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

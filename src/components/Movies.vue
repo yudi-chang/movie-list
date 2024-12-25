@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Movie } from '@/types';
+import type { Movie, MoviesFetchPayload } from '@/types';
 import { inject } from 'vue';
 import ErrorMessage from './ErrorMessage.vue';
 import MoviesSearchBar from './MoviesSearchBar.vue';
@@ -62,7 +62,7 @@ const props = withDefaults(
 )
 
 // inject
-const fetchMovies = inject<() => void>('fetchMovies')
+const fetchMovies = inject<(payload?: MoviesFetchPayload) => void>('fetchMovies', () => {});
 
 const refetchMovies = (): void => {
   if (fetchMovies) {
