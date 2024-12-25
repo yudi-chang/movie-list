@@ -2,7 +2,7 @@
 <template>
   <div>
     <template v-if="!props.isErrorFetching">
-      <h1 class="mb-28 text-3xl fw-bold">Movies</h1>
+      <h1 class="mb-28 text-3xl fw-bold">{{ props.title }}</h1>
       <MoviesSearchBar v-if="showUtilities"/>
     </template>
     <div class="movies mt-40">
@@ -53,9 +53,11 @@ const props = withDefaults(
   isLoading: boolean
   isErrorFetching: boolean
   showUtilities?: boolean
+  title?: string
 }>(),
   {
     showUtilities: true,
+    title: 'Movies',
   }
 )
 

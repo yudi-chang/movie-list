@@ -2,7 +2,7 @@
   <main class="pb-16">
     <Container>
       <!-- no fetch in this page, so isLoading and isErrorFetching will be false-->
-      <Movies :movies="movieStore.favorites" :is-loading="false" :is-error-fetching="false" :show-utilities="false"/>
+      <Movies :movies="movieStore.favorites" :is-loading="false" :is-error-fetching="false" :show-utilities="false" title="Favorites"/>
     </Container>
   </main>
 </template>

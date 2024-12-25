@@ -6,6 +6,7 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import { createVuetify } from 'vuetify';
 import { VPagination } from 'vuetify/components';
 import 'vuetify/styles';
+import '@mdi/font/css/materialdesignicons.css';
 
 import App from './App.vue'
 import router from './router'
