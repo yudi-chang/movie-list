@@ -85,3 +85,10 @@ body {
 .enter {
   animation-name: enterCenter;
 }
+
+
+@media (max-width: $breakpoint-sm) {
+  body {
+    padding-top: 60px;
+  }
+}
